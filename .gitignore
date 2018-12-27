@@ -2,3 +2,15 @@
 *.pyc
 *.mp3
 *.lrc
+Music_download/build/music163/Analysis-00.toc
+Music_download/build/music163/base_library.zip
+Music_download/build/music163/EXE-00.toc
+Music_download/build/music163/music163.exe.manifest
+Music_download/build/music163/PKG-00.pkg
+Music_download/build/music163/PKG-00.toc
+Music_download/build/music163/PYZ-00.pyz
+Music_download/build/music163/PYZ-00.toc
+Music_download/build/music163/warn-music163.txt
+Music_download/build/music163/xref-music163.html
+Music_download/dist/music163.exe
+Music_download/music163.spec
