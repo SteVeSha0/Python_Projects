@@ -259,9 +259,9 @@ class Netease():
 
 
 if __name__ == "__main__":
-    if not os.path.exists('.\\mymusic'): #在当前文件夹下新建一个文件夹，用来存放下载歌曲与歌词
-        os.mkdir('.\\mymusic')
-    output = '.\\mymusic'
+    if not os.path.exists('./mymusic'): #在当前文件夹下新建一个文件夹，用来存放下载歌曲与歌词 注意mac路径与win路径的区别
+        os.mkdir('./mymusic')
+    output = './mymusic'
 
     netease = Netease(output)
 
