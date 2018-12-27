@@ -259,13 +259,13 @@ class Netease():
 
 
 if __name__ == "__main__":
-    if not os.path.exists('.\\mymusic'):
+    if not os.path.exists('.\\mymusic'): #在当前文件夹下新建一个文件夹，用来存放下载歌曲与歌词
         os.mkdir('.\\mymusic')
     output = '.\\mymusic'
 
     netease = Netease(output)
 
-
+    #用户复制粘贴歌单地址
     print('请粘贴歌单地址：')
     user_url = input()
     url = user_url
@@ -274,7 +274,7 @@ if __name__ == "__main__":
     playlist_song_info = netease.spider.getPlaylist(playlist_id)
     
     for song_info in playlist_song_info:
-        # 水木年华 - 一生有你
+     
         song_name = song_info['artists_name'] + ' - ' + song_info['song_name']
         # 去掉非法字符
         song_name = song_name.replace('/', '&')
