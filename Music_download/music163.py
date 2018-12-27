@@ -259,12 +259,16 @@ class Netease():
 
 
 if __name__ == "__main__":
-    output = 'G:\\mymusic'
+    if not os.path.exists('.\\mymusic'):
+        os.mkdir('.\\mymusic')
+    output = '.\\mymusic'
 
     netease = Netease(output)
 
-    # 墨鱼茄子喜欢的
-    url = 'https://music.163.com/#/playlist?id=2068361032'
+
+    print('请粘贴歌单地址：')
+    user_url = input()
+    url = user_url
     playlist_id = re.match(r'(.*?)id=(\d*)', url).groups()[-1]
 
     playlist_song_info = netease.spider.getPlaylist(playlist_id)
