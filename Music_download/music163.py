@@ -105,7 +105,7 @@ class Spider():
         :return: 歌曲下载地址
         """
 
-        url = 'http://music.163.com/weapi/song/enhance/player/url?csrf_token='
+        url = 'http://music.163.com/weapi/song/enhance/player/url?csrf_token='  #通过song_id获取歌曲的URL地址
         csrf = ''
         params = {'ids': [song_id], 'br': bit_rate, 'csrf_token': csrf}
         result = self.post_request(url, params)
@@ -267,8 +267,9 @@ if __name__ == "__main__":
 
     #用户复制粘贴歌单地址
     print('请粘贴歌单地址：')
-    user_url = input()
-    url = user_url
+    # user_url = input()
+    # url = user_url
+    url = 'https://music.163.com/#/song?id=436514312' 
     playlist_id = re.match(r'(.*?)id=(\d*)', url).groups()[-1]
 
     playlist_song_info = netease.spider.getPlaylist(playlist_id)
